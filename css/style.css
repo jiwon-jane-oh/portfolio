@@ -1,14 +1,14 @@
 /* Global */
 :root {
-/* 
+  /* 
 https://mui.com/material-ui/customization/color/
 https://m2.material.io/design/color/the-color-system.html#color-theme-creation
  */
   /* App Colors */
   --color-primary: var(--color-black);
-  --color-primary-varient :var(--color-gray)
+  --color-primary-varient: var(--color-gray);
   --color-accent: var(--color-blue);
-  --color-accent-varient:var(--color-orange)
+  --color-accent-varient: var(--color-orange);
   --color-text: var(--color-white);
 
   /* Colors */
@@ -25,6 +25,7 @@ https://m2.material.io/design/color/the-color-system.html#color-theme-creation
 
 body {
   font-family: 'Open Sans', sans-serif;
+  margin: 0;
 }
 
 h1,
@@ -53,4 +54,49 @@ button {
 
 button:focus {
   outline: 1px solid var(--color-accent);
+}
+
+/* sticky -flow 유지  or fixed 항상 정해진 위치에 유지됨 */
+.header {
+  position: fixed;
+  top: 0;
+  padding: 1rem;
+  background-color: var(--color-black);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: --color-text;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.header__logo__img {
+  width: 36px;
+  height: 36px;
+}
+.header__logo__title {
+  /* rem-기본값의 비율 설정 (16px *1.8)  */
+  font-size: 1.8rem;
+}
+
+.header__menu {
+  display: flex;
+  gap: 4px;
+}
+
+.header__menu__item {
+  padding: 8px 16px;
+}
+
+.header__menu__item:hover {
+  border-bottom: 1px solid var(--color-accent);
+}
+
+.header__menu__item.active {
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
 }
