@@ -1,3 +1,5 @@
+'use strict';
+
 //window: global object
 //window.document.querySelector();
 

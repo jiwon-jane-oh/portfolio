@@ -36,8 +36,11 @@
     <!-- Javascript -->
     <!-- defer: This boolean attribute is set to indicate to a browser that the script is meant to be executed 
                 after the document has been parsed, but befrore firing
-    -->
-    <script src="src/main.js" defer></script>
+    
+         type="module" => make the js file sperately, can only access value defined in their own file 
+          -->
+    <script type="module" src="src/main.js" defer></script>
+    <script type="module" src="src/projects.js" defer></script>
   </head>
   <body>
     <!-- HEADER -->
