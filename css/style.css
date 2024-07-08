@@ -81,10 +81,10 @@ button:focus {
 
 /* sticky -flow 유지  or fixed 항상 정해진 위치에 유지됨 */
 .header {
+  background-color: transparent;
   position: fixed;
   top: 0;
   padding: 1rem;
-  background-color: var(--color-black);
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -92,6 +92,13 @@ button:focus {
   color: --color-text;
   /* 헤더를 가장 위에보여주게 설정  */
   z-index: 1;
+
+  transition: all 300ms ease;
+}
+
+.header--dark {
+  background-color: var(--color-primary);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .header__logo {
@@ -130,6 +137,7 @@ button:focus {
 
 #home {
   background-color: var(--color-primary);
+
   color: var(--color-text);
   padding: 5rem 1rem;
   padding-top: 7rem;
