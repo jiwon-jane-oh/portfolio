@@ -23,3 +23,26 @@ document.addEventListener('scroll', () => {
   const value = 1 - window.scrollY / homeHeight;
   home.style.opacity = `${value}`;
 });
+
+const arrow = document.querySelector('.arrow-up');
+
+document.addEventListener('scroll', () => {
+  if (window.scrollY > homeHeight / 2) {
+    arrow.style.opacity = 1;
+    // arrow.classList.add('arrow-hide');
+  } else {
+    arrow.style.opacity = 0;
+    //  arrow.classList.remove('arrow-hide');
+  }
+});
+
+//Navbar toggle button click
+const navbarMenu = document.querySelector('.header__menu');
+const navbarToggle = document.querySelector('.header__toggle');
+navbarToggle.addEventListener('click', () => {
+  navbarMenu.classList.toggle('open');
+});
+
+navbarMenu.addEventListener('click', () => {
+  navbarMenu.classList.remove('open');
+});
