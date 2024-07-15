@@ -27,6 +27,7 @@ https://m2.material.io/design/color/the-color-system.html#color-theme-creation
 }
 
 html {
+  /* make scroll smoothly  */
   scroll-behavior: smooth;
 }
 body {
