@@ -26,6 +26,9 @@ https://m2.material.io/design/color/the-color-system.html#color-theme-creation
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
@@ -330,7 +333,7 @@ button:focus {
   white-space: nowrap;
 }
 
-.category__selected {
+.category--selected {
   background-color: var(--color-accent);
   color: var(--color-primary);
 }
@@ -362,6 +365,11 @@ button:focus {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
+  transition: all 250ms ease-out;
+}
+.projects.anim-out {
+  opacity: 0;
+  transform: scale(0.96) translateY(20px);
 }
 
 .project {
